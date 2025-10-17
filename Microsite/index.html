@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trénink vytrvalostního běžce</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70" tabindex="0">
+
+  <!-- 🌟 NAVBAR -->
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#uvod">Trénink</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#uvod">Domů</a></li>
+          <li class="nav-item"><a class="nav-link" href="#plan">Plán</a></li>
+          <li class="nav-item"><a class="nav-link" href="#mental">Mentální síla</a></li>
+          <li class="nav-item"><a class="nav-link" href="#rezervace">Rezervace</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 🏃‍♂️ ÚVOD -->
+<section id="uvod" class="py-5 bg-light mt-5">
+  <div class="container">
+    <h1 class="display-5 fw-bold text-center mb-4">Trénink vytrvalostního běžce</h1>
+    <p class="lead text-center mb-5">Rychlost. Disciplína. Vytrvalost. Každý den o krok blíž k dokonalosti.</p>
+
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="https://d2c9wzes5ckfvo.cloudfront.net/blog/beh_zima_les_sneh-medium.jpg"
+             class="img-fluid rounded shadow"
+             alt="Běžec v přírodě">
+      </div>
+      <div class="col-md-6">
+        <h2 class="mb-3">Cesta k mentální síle</h2>
+        <p class="fs-5">
+          Běh není jen o fyzické kondici. Je to cesta k mentální síle, vytrvalosti a sebeovládání.
+          Každý trénink tě posouvá blíž k cíli — k dokonalé verzi sebe sama.
+        </p>
+        <a href="#rezervace" class="btn btn-success btn-lg px-5 fw-bold shadow-lg">
+              Rezervovat trénink
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- 🗓️ PLÁN -->
+  <section id="plan" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Týdenní plán tréninku</h2>
+      <div class="table-responsive">
+        <table class="table table-striped text-center align-middle">
+          <thead class="table-dark">
+            <tr>
+              <th>Den</th>
+              <th>Trénink</th>
+              <th>Fokus</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Pondělí</td><td>Lehký běh 8–10 km</td><td>Regenerace</td></tr>
+            <tr><td>Úterý</td><td>Intervaly 8×400 m</td><td>Rychlost</td></tr>
+            <tr><td>Středa</td><td>Posilovna + Core</td><td>Stabilita</td></tr>
+            <tr><td>Čtvrtek</td><td>Běh do kopce 6×200 m</td><td>Síla</td></tr>
+            <tr><td>Pátek</td><td>Volno / Strečink</td><td>Regenerace</td></tr>
+            <tr><td>Sobota</td><td>Tempo běh 6–8 km</td><td>Prahová zóna</td></tr>
+            <tr><td>Neděle</td><td>Dlouhý běh 14–18 km</td><td>Vytrvalost</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🧠 MENTÁLNÍ SÍLA -->
+  <section id="mental" class="py-5 bg-dark text-light text-center">
+    <div class="container">
+      <h2 class="mb-4">Mentální příprava</h2>
+      <p class="lead">Vytrvalost není jen o nohách, ale o hlavě. Každý kilometr je test odhodlání a vnitřní síly.</p>
+      <blockquote class="blockquote mt-4">
+        <p class="mb-0">„Disciplína poráží motivaci.“</p>
+      </blockquote>
+      <div class="ratio ratio-16x9 mt-4">
+        <iframe src="https://www.youtube.com/embed/26U_seo0a1g" title="Motivační video" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📝 REZERVACE -->
+  <section id="rezervace" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Rezervace tréninku</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow">
+            <div class="card-body">
+              <form>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Jméno</label>
+                  <input type="text" class="form-control" id="name" placeholder="Daniel Havlíček" required>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">E-mail</label>
+                  <input type="email" class="form-control" id="email" placeholder="daniel@example.com" required>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="date" class="form-label">Datum</label>
+                    <input type="date" class="form-control" id="date" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="time" class="form-label">Čas</label>
+                    <select id="time" class="form-select" required>
+                      <option selected disabled>Vyber čas</option>
+                      <option>6:00</option>
+                      <option>8:00</option>
+                      <option>17:00</option>
+                      <option>18:30</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="type" class="form-label">Typ tréninku</label>
+                  <select id="type" class="form-select" required>
+                    <option selected disabled>Vyber zaměření</option>
+                    <option>Tempo běh</option>
+                    <option>Intervaly</option>
+                    <option>Dlouhý běh</option>
+                    <option>Regenerační běh</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="notes" class="form-label">Poznámka</label>
+                  <textarea id="notes" class="form-control" rows="3"
+                    placeholder="Např. příprava na 10 km závod"></textarea>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-success btn-lg">Rezervovat</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+<footer class="py-4 bg-light text-center text-md-start">
+  <div class="container d-md-flex justify-content-between align-items-center">
+    <p class="mb-2 mb-md-0">&copy; 2025 Trénink vytrvalostního běžce | Design by Daniel Havlíček</p>
+    
+    <ul class="list-inline mb-0">
+      <li class="list-inline-item">
+        <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#gdprModal">GDPR</a>
+      </li>
+      <li class="list-inline-item">
+        <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#tacModal">Terms & Conditions</a>
+      </li>
+      <li class="list-inline-item">
+        <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#accessModal">Prohlášení o přístupnosti</a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+<!-- MODALS -->
+<!-- GDPR Modal -->
+<div class="modal fade" id="gdprModal" tabindex="-1" aria-labelledby="gdprModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="gdprModalLabel">GDPR</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zavřít"></button>
+      </div>
+      <div class="modal-body">
+        <p>Vaše osobní údaje jsou chráněny a používány pouze k účelům rezervace tréninku.</p>
+        <p>Neukládáme citlivé informace ani je nesdílíme s třetími stranami bez vašeho souhlasu.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zavřít</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Terms & Conditions Modal -->
+<div class="modal fade" id="tacModal" tabindex="-1" aria-labelledby="tacModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="tacModalLabel">Terms & Conditions</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zavřít"></button>
+      </div>
+      <div class="modal-body">
+        <p>Podmínky používání stránky a rezervace tréninků:</p>
+        <ul>
+          <li>Rezervace je závazná, změny hlaste min. 24 h předem.</li>
+          <li>Stránka je určena pro individuální tréninky vytrvalostních běžců.</li>
+          <li>Veškeré informace jsou poskytovány bez záruky.</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zavřít</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Accessibility Modal -->
+<div class="modal fade" id="accessModal" tabindex="-1" aria-labelledby="accessModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="accessModalLabel">Prohlášení o přístupnosti</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zavřít"></button>
+      </div>
+      <div class="modal-body">
+        <p>Tato microsite se snaží být přístupná pro všechny uživatele, včetně osob se zdravotním omezením.</p>
+        <p>Text je čitelný, odkazy mají jasné kontrasty a navigace je dostupná z klávesnice.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zavřít</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- COOKIE LIŠTA -->
+<div id="cookieBanner" class="fixed-bottom d-flex justify-content-between align-items-center p-3 bg-dark text-light shadow-lg rounded-top mx-3 mb-3" style="display:flex; opacity:0; transition: opacity 0.5s;">
+  <div class="me-3">
+    🌐 Tato stránka používá cookies pro lepší funkčnost a analytiku. 
+    <a href="#gdpr" class="text-decoration-underline text-warning fw-bold">Více info</a>
+  </div>
+  <button type="button" class="btn btn-warning fw-bold" id="acceptCookies">Souhlasím</button>
+</div>
+
+<script>
+  const banner = document.getElementById('cookieBanner');
+
+  // Pokud už uživatel souhlasil, lišta se nezobrazuje
+  if (localStorage.getItem('cookiesAccepted') !== 'true') {
+    setTimeout(() => {
+      banner.style.opacity = '1'; // jemné postupné zobrazení
+    }, 500);
+  } else {
+    banner.style.display = 'none';
+  }
+
+  document.getElementById('acceptCookies').addEventListener('click', function() {
+    localStorage.setItem('cookiesAccepted', 'true');
+    banner.style.opacity = '0';
+    setTimeout(() => { banner.style.display = 'none'; }, 500);
+  });
+</script>
+
+</body>
+
+</html>

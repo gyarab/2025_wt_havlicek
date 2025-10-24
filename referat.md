@@ -14,7 +14,8 @@ James Gosling (*1955, Kanada*) je kanadský informatik a softwarový inženýr, 
 - [Oficiální blog Jamese Goslinga](https://nighthacks.com/)
 
 ## Obrázek
-![James Gosling](https://upload.wikimedia.org/wikipedia/commons/2/2e/James_Gosling_2008.jpg)
+![James Gosling](https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/James_Gosling_2008.jpg/250px-James_Gosling_2008.jpg)
+
 
 
 ## Tabulka důležitých let

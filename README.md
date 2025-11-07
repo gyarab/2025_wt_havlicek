@@ -4,3 +4,5 @@ Repozitář obsahuje:
 
 referat.md – můj referát na Jamese Goslinga
 prvni_web/ – První prolinkovaný web na pokusy s Bootrapem v adresáři
+
+nevim

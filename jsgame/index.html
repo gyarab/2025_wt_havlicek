@@ -40,11 +40,16 @@
         attempts++
         attemptsEl.textContent = attempts
 
-
       
     }
 
     document.getElementById("guessBtn").addEventListener("click", checkGuess)
+    document.getElementById("guess").addEventListener("keydown", function (e){
+        if(e.key === "Enter"){
+            checkGuess()
+            e.srcElement.value = ""
+        }
+    })
 
     newGame()
 </script>

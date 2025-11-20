@@ -3,56 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JSGame</title>
+    <title>JS Game</title>
+
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            text-align: center;
+        }
+        input {
+            padding: 3px;
+            margin: 6px;
+            font-size: 1rem;
+            width: 80px;
+        }
+        button {
+            padding: 6px 12px;
+            font-size: 1rem;
+            margin: 5px;
+            cursor: pointer;
+        }
+        #message {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        footer {
+            margin-top: 640px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <h1>JS Game</h1>
-<p>
-    Hádej číslo od 1 do 20
-</p>
+    <p id="message">
+        Hádej číslo od 1 do 20
+    </p>
 
-    <input id="newGameBtn" type="button" value="Nová hra" onclick="newGame()">
+    <input id="guess" type="number" name="guess">
+    <input id="guessBtn" type="button" value="Zkus">
     <br>
-    <input id="guess" type="number" name="Guess">
-    <input id="guessBtn" type="button" value="">
-<p>
-    Počet pokusů <span id="attempts">0</span>
-</p>
+    <input id="newGameBtn" type="button" value="Nova hra" onclick="newGame()">
 
-<script>
-    let secretNumber
-    let attempts
+    <p>
+        Počet pokusů <span id="attempts">0</span>.
+    </p>
 
-    const attemptsEl = document.getElementById("attempts")
+    <footer>©Daniel Havlicek</footer>
 
+    <script>
+        let secretNumber
+        let attempts
+        const maxAttempts = 8
 
-    function newGame(){
-        secretNumber = Math.floor(Math.random()*20)+1
-        attempts = 0
-        attemptsEl.textContent = attempts
- 
+        const attemptsEl = document.getElementById('attempts')
+        const messageEl = document.getElementById('message')
 
-        console.log("NEW GAME")
-        console.log("Tajné číslo je", secretNumber)
-    }
+        function newGame() {
+            support() // podpora uživatelů
+            secretNumber = Math.floor(Math.random() * 20) + 1
+            attempts = 0
+            attemptsEl.textContent = attempts
+            messageEl.textContent = "Hádej číslo od 1 do 20"
+            messageEl.style.color = "black"
 
-    function checkGuess(){
-        attempts++
-        attemptsEl.textContent = attempts
-
-      
-    }
-
-    document.getElementById("guessBtn").addEventListener("click", checkGuess)
-    document.getElementById("guess").addEventListener("keydown", function (e){
-        if(e.key === "Enter"){
-            checkGuess()
-            e.srcElement.value = ""
+            console.clear()
+            console.log('--- NEW GAME ---')
+            console.log('Tajné číslo je:', secretNumber)
         }
-    })
 
-    newGame()
-</script>
+        function checkGuess() {
+            attempts++
+            attemptsEl.textContent = attempts
 
+            const inputEl = document.getElementById('guess')
+            const guess = Number(inputEl.value)
+
+            console.log(`Pokus ${attempts}: hráč tipuje ${guess}`)
+
+            // výhra
+            if (guess === secretNumber) {
+                messageEl.textContent = "🎉 Správně! Vyhrál jsi!"
+                messageEl.style.color = "green"
+                console.log("Hráč vyhrál.")
+                return
+            }
+
+            // prohra
+            if (attempts >= maxAttempts) {
+                messageEl.textContent = `❌ Prohrál jsi. Tajné číslo bylo ${secretNumber}.`
+                messageEl.style.color = "red"
+                console.log("GAME OVER – pokusy vyčerpány.")
+                return
+            }
+
+            // větší/menší
+            if (guess > secretNumber) {
+                messageEl.textContent = "Zkus menší číslo."
+            } else {
+                messageEl.textContent = "Zkus větší číslo."
+            }
+
+            inputEl.value = ""
+        }
+
+        document.getElementById('guessBtn').addEventListener('click', checkGuess)
+        document.getElementById('guess').addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') {
+                checkGuess()
+                e.srcElement.value = ''
+            }
+        })
+
+        function hlaska() {
+            alert('Pospěšte si, hra běží!')
+        }
+
+        function support() {
+            // zobrazí hlášku po 10 sekundách
+            window.setTimeout(hlaska, 10000)
+        }
+
+        newGame()
+    </script>
 </body>
 </html>

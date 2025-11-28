@@ -9,13 +9,33 @@
 </head>
 <body>
     <div class="container">
-        <h1>VueJS DEMO</h1>
-        <a href="https://vuejs.org/guide/introduction" target="_blank">Introduction</a>
+        <h1>Letenky do vesmíru</h1>
+
         <div id="app">      
-            {{ message }} {{ counter - 1 }}
-            <br>
-            <button @click="counter++">Counter {{ counter }}</button>
+            <form>
+                <div>
+                 <input class="form-control" type="text" name="name" placeholder="Napište jméno">
+                </div>
+                <div>
+                    <select name="planet" class="form-select">
+                    <option value="Mars">Mars - červená planeta</option>
+                    <option value="Venus">Venuše - kráska planet</option>
+                </select>    
+                </div>
+                <div>
+                    <input type="number" name="days" id="days" class="form-control">
+                </div>
+                <div>
+                    <input type="checkbox" id="terms">
+                    <label for="terms" class="form-check-label">Souhlasím s rizikem</label>
+                </div>
+                <div>
+                    <button class="btn btn-primary" >Odeslat</button>
+                </div>
+
+            </form>
         </div>
+
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

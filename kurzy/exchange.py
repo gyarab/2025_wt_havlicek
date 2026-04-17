@@ -25,22 +25,25 @@ print("\nVyber převod:")
 print("1 - EUR → CZK")
 print("2 - CZK → EUR")
 
-while True:
+choice = input("Zadej 1 nebo 2: ")
+while choice not in ("1", "2"):
+    print("Neplatná volba.")
     choice = input("Zadej 1 nebo 2: ")
-    if choice in ("1", "2"):
-        break
-    print("Neplatná volba. Zadej 1 nebo 2.")
 
+amount_input = input("Zadej částku: ").replace(",", ".")
 while True:
     try:
-        amount = float(input("Zadej částku: ").replace(",", "."))
+        amount = float(amount_input)
         if amount > 0:
             break
         print("Částka musí být kladná.")
     except ValueError:
         print("Neplatné číslo.")
+    amount_input = input("Zadej částku: ").replace(",", ".")
 
 if choice == "1":
-    print(f"{amount:.2f} EUR = {amount * rate:.2f} CZK")
+    result = amount * rate
+    print(f"{amount:.2f} EUR = {result:.2f} CZK")
 else:
-    print(f"{amount:.2f} CZK = {amount / rate:.2f} EUR")
+    result = amount / rate
+    print(f"{amount:.2f} CZK = {result:.2f} EUR")
